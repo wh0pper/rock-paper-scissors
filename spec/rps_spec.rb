@@ -1,7 +1,7 @@
 require('rspec')
 require('rps')
 
-describe('#initialize') do
+describe('#play') do
   it("generates a random int between 1-3 to represent computers play") do
     game = RPS.new()
     expect([1,2,3].include?game.computer)
@@ -12,7 +12,6 @@ describe('#userwins?') do
   it("returns true if user wins and false if computer wins") do
     game = RPS.new()
     computer = game.computer
-    puts computer
     if (computer == 1)
       expect(game.userwins?("rock")).to(eq(false))
       expect(game.userwins?("paper")).to(eq(true))
