@@ -13,17 +13,17 @@ describe('#userwins?') do
     game = RPS.new()
     computer = game.computer
     if (computer == 1)
-      expect(game.userwins?("rock")).to(eq(false))
-      expect(game.userwins?("paper")).to(eq(true))
-      expect(game.userwins?("scissors")).to(eq(false))
+      expect(game.userwins("rock")).to(eq('tie'))
+      expect(game.userwins("paper")).to(eq(true))
+      expect(game.userwins("scissors")).to(eq(false))
     elsif (computer == 2)
-      expect(game.userwins?("rock")).to(eq(false))
-      expect(game.userwins?("paper")).to(eq(false))
-      expect(game.userwins?("scissors")).to(eq(true))
+      expect(game.userwins("rock")).to(eq(false))
+      expect(game.userwins("paper")).to(eq('tie'))
+      expect(game.userwins("scissors")).to(eq(true))
     elsif (computer == 3)
-      expect(game.userwins?("rock")).to(eq(true))
-      expect(game.userwins?("paper")).to(eq(false))
-      expect(game.userwins?("scissors")).to(eq(false))
+      expect(game.userwins("rock")).to(eq(true))
+      expect(game.userwins("paper")).to(eq(false))
+      expect(game.userwins("scissors")).to(eq('tie'))
     end
   end
 end
