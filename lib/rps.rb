@@ -61,7 +61,6 @@ class RPS
   end
 
   def score
-    puts @usertally, @computertally
     return @usertally, @computertally
   end
 end
