@@ -1,4 +1,8 @@
 class RPS
+  def initialize
+    @computertally = 0
+    @usertally = 0
+  end
 
   def computer
     @computer = rand(1..3) #1=rock, 2=paper, 3=scissors
@@ -11,9 +15,9 @@ class RPS
     end
   end
 
+
+
   def userwins(user)
-    @computertally = 0
-    @usertally = 0
     if (user == 'rock')
       if (@computer == 3)
         @usertally += 1
@@ -57,6 +61,7 @@ class RPS
   end
 
   def score
+    puts @usertally, @computertally
     return @usertally, @computertally
   end
 end
